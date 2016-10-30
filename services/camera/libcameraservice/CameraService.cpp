@@ -2047,10 +2047,11 @@ void CameraService::increaseSoundRef() {
     mSoundRef++;
 }
 
-void CameraService::loadSoundLocked(sound_kind kind) {
+void CameraService::loadSoundLocked(sound_kind /*kind*/) {
     ATRACE_CALL();
 
     LOG1("CameraService::loadSoundLocked ref=%d", mSoundRef);
+/*
     if (SOUND_SHUTTER == kind && mSoundPlayer[SOUND_SHUTTER] == NULL) {
         mSoundPlayer[SOUND_SHUTTER] = newMediaPlayer("/product/media/audio/ui/camera_click.ogg");
         if (mSoundPlayer[SOUND_SHUTTER] == nullptr) {
@@ -2068,6 +2069,7 @@ void CameraService::loadSoundLocked(sound_kind kind) {
             mSoundPlayer[SOUND_RECORDING_STOP] = newMediaPlayer("/system/media/audio/ui/VideoStop.ogg");
         }
     }
+*/
 }
 
 void CameraService::decreaseSoundRef() {
