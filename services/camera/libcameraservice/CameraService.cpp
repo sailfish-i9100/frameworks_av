@@ -2047,7 +2047,7 @@ void CameraService::increaseSoundRef() {
     mSoundRef++;
 }
 
-void CameraService::loadSoundLocked(sound_kind kind) {
+void CameraService::loadSoundLocked(sound_kind) {
     ATRACE_CALL();
 
     LOG1("CameraService::loadSoundLocked ref=%d", mSoundRef);
